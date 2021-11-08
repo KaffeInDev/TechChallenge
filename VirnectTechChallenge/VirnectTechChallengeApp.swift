@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import CoreModular
 
 @main
 struct VirnectTechChallengeApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainContentView()
         }
+    }
+    
+    init() {
+        RemoteDefault.policy =  RemotePolicy(host: Constants.host)
     }
 }

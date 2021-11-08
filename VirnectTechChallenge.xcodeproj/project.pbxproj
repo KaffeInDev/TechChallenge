@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1D1DE7B627393A1500EDCD3F /* VirnectTechChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7B527393A1500EDCD3F /* VirnectTechChallengeApp.swift */; };
-		1D1DE7B827393A1500EDCD3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7B727393A1500EDCD3F /* ContentView.swift */; };
 		1D1DE7BA27393A1B00EDCD3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1DE7B927393A1B00EDCD3F /* Assets.xcassets */; };
 		1D1DE7BD27393A1B00EDCD3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1DE7BC27393A1B00EDCD3F /* Preview Assets.xcassets */; };
 		1D1DE7C727393A1B00EDCD3F /* VirnectTechChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7C627393A1B00EDCD3F /* VirnectTechChallengeTests.swift */; };
 		1D1DE7D127393A1B00EDCD3F /* VirnectTechChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7D027393A1B00EDCD3F /* VirnectTechChallengeUITests.swift */; };
 		1D1DE7D327393A1B00EDCD3F /* VirnectTechChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7D227393A1B00EDCD3F /* VirnectTechChallengeUITestsLaunchTests.swift */; };
+		1D1DE7E027394C1900EDCD3F /* Model+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7DF27394C1900EDCD3F /* Model+Remote.swift */; };
+		1D1DE7EE27394F8300EDCD3F /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7ED27394F8300EDCD3F /* MainContentView.swift */; };
+		1D1DE7F02739539200EDCD3F /* MainContetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7EF2739539200EDCD3F /* MainContetViewModel.swift */; };
+		1D1DE7F5273955F700EDCD3F /* CoreModular in Frameworks */ = {isa = PBXBuildFile; productRef = 1D1DE7F4273955F700EDCD3F /* CoreModular */; };
+		1D1DE7F7273955F700EDCD3F /* CoreModular in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 1D1DE7F4273955F700EDCD3F /* CoreModular */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1D1DE7F92739567700EDCD3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7F82739567700EDCD3F /* Constants.swift */; };
+		1D1DE7FC27396D8E00EDCD3F /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7FB27396D8E00EDCD3F /* HTMLStringView.swift */; };
+		1D1DE7FE273986A600EDCD3F /* MainListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7FD273986A600EDCD3F /* MainListContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +40,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1D1DE7F6273955F700EDCD3F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D1DE7F7273955F700EDCD3F /* CoreModular in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1D1DE7B227393A1500EDCD3F /* VirnectTechChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirnectTechChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D1DE7B527393A1500EDCD3F /* VirnectTechChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirnectTechChallengeApp.swift; sourceTree = "<group>"; };
-		1D1DE7B727393A1500EDCD3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D1DE7B927393A1B00EDCD3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D1DE7BC27393A1B00EDCD3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D1DE7C227393A1B00EDCD3F /* VirnectTechChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirnectTechChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +64,13 @@
 		1D1DE7CC27393A1B00EDCD3F /* VirnectTechChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirnectTechChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D1DE7D027393A1B00EDCD3F /* VirnectTechChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirnectTechChallengeUITests.swift; sourceTree = "<group>"; };
 		1D1DE7D227393A1B00EDCD3F /* VirnectTechChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirnectTechChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D1DE7DF27394C1900EDCD3F /* Model+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Remote.swift"; sourceTree = "<group>"; };
+		1D1DE7EB27394DAA00EDCD3F /* CoreModular */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CoreModular; path = VirnectTechChallenge/CoreModular; sourceTree = "<group>"; };
+		1D1DE7ED27394F8300EDCD3F /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		1D1DE7EF2739539200EDCD3F /* MainContetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContetViewModel.swift; sourceTree = "<group>"; };
+		1D1DE7F82739567700EDCD3F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1D1DE7FB27396D8E00EDCD3F /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
+		1D1DE7FD273986A600EDCD3F /* MainListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1DE7F5273955F700EDCD3F /* CoreModular in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +102,12 @@
 		1D1DE7A927393A1400EDCD3F = {
 			isa = PBXGroup;
 			children = (
+				1D1DE7EA27394DAA00EDCD3F /* Packages */,
 				1D1DE7B427393A1500EDCD3F /* VirnectTechChallenge */,
 				1D1DE7C527393A1B00EDCD3F /* VirnectTechChallengeTests */,
 				1D1DE7CF27393A1B00EDCD3F /* VirnectTechChallengeUITests */,
 				1D1DE7B327393A1500EDCD3F /* Products */,
+				1D1DE7F3273955F700EDCD3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +124,9 @@
 		1D1DE7B427393A1500EDCD3F /* VirnectTechChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				1D1DE7FA27396D7B00EDCD3F /* CommonViews */,
+				1D1DE7EC27394F4E00EDCD3F /* Feature */,
 				1D1DE7B527393A1500EDCD3F /* VirnectTechChallengeApp.swift */,
-				1D1DE7B727393A1500EDCD3F /* ContentView.swift */,
 				1D1DE7B927393A1B00EDCD3F /* Assets.xcassets */,
 				1D1DE7BB27393A1B00EDCD3F /* Preview Content */,
 			);
@@ -127,6 +158,41 @@
 			path = VirnectTechChallengeUITests;
 			sourceTree = "<group>";
 		};
+		1D1DE7EA27394DAA00EDCD3F /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				1D1DE7EB27394DAA00EDCD3F /* CoreModular */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		1D1DE7EC27394F4E00EDCD3F /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				1D1DE7ED27394F8300EDCD3F /* MainContentView.swift */,
+				1D1DE7FD273986A600EDCD3F /* MainListContentView.swift */,
+				1D1DE7EF2739539200EDCD3F /* MainContetViewModel.swift */,
+				1D1DE7DF27394C1900EDCD3F /* Model+Remote.swift */,
+				1D1DE7F82739567700EDCD3F /* Constants.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		1D1DE7F3273955F700EDCD3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D1DE7FA27396D7B00EDCD3F /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				1D1DE7FB27396D8E00EDCD3F /* HTMLStringView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,12 +203,16 @@
 				1D1DE7AE27393A1400EDCD3F /* Sources */,
 				1D1DE7AF27393A1400EDCD3F /* Frameworks */,
 				1D1DE7B027393A1400EDCD3F /* Resources */,
+				1D1DE7F6273955F700EDCD3F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = VirnectTechChallenge;
+			packageProductDependencies = (
+				1D1DE7F4273955F700EDCD3F /* CoreModular */,
+			);
 			productName = VirnectTechChallenge;
 			productReference = 1D1DE7B227393A1500EDCD3F /* VirnectTechChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -257,8 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D1DE7B827393A1500EDCD3F /* ContentView.swift in Sources */,
+				1D1DE7F92739567700EDCD3F /* Constants.swift in Sources */,
+				1D1DE7E027394C1900EDCD3F /* Model+Remote.swift in Sources */,
+				1D1DE7FC27396D8E00EDCD3F /* HTMLStringView.swift in Sources */,
 				1D1DE7B627393A1500EDCD3F /* VirnectTechChallengeApp.swift in Sources */,
+				1D1DE7F02739539200EDCD3F /* MainContetViewModel.swift in Sources */,
+				1D1DE7FE273986A600EDCD3F /* MainListContentView.swift in Sources */,
+				1D1DE7EE27394F8300EDCD3F /* MainContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +674,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D1DE7F4273955F700EDCD3F /* CoreModular */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreModular;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D1DE7AA27393A1400EDCD3F /* Project object */;
 }
