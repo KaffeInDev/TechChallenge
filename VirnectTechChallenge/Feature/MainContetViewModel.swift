@@ -17,16 +17,16 @@ class MainViewModel: ObservableObject {
         case music = "음악"
         case society = "사회"
     }
-    @Published var results: [Model.Books.Book] = []
-    @Published var kindOfBooks: KindOfBooks = .computer
+    @Published var books: [Model.Books.Item] = []
+    var kindOfBooks: KindOfBooks = .computer
     private var cancelables: Set<AnyCancellable> = Set()
     
-    func searchBook(_ kind: KindOfBooks = .computer) {
-        Remote<Model.Books>.search(kind.rawValue).asObservable()
+    func searchBook() {
+        Remote<Model.Books>.search(kindOfBooks.rawValue).asObservable()
             .replaceError(with: .mock)
             .map { $0.items }
             .print()
-            .assign(to: \.results, on: self)
+            .assign(to: \.books, on: self)
             .store(in: &cancelables)
     }
 }

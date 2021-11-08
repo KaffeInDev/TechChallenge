@@ -9,17 +9,17 @@ import SwiftUI
 
 struct MainListContentView: View {
     @ObservedObject var model = MainViewModel()
-    @State var results: [Model.Books.Book] = []
     var body: some View {
         NavigationView {
-            List(model.results, id: \.title) { item in
-                HStack(alignment: .bottom) {
-                    asyncImage(URL(string: item.image))
-                    Text(item.palinTitle())
-                        .frame(height: 50, alignment: .leading)
-                    
+            List(model.books, id: \.title) { item in
+                NavigationLink(destination: DetailContentView(item.isbn)) {
+                    HStack(alignment: .bottom) {
+                        asyncImage(URL(string: item.image))
+                        Text(item.plainTitle())
+                            .frame(height: 50, alignment: .leading)
+                        
+                    }
                 }
-                
             }
             .navigationTitle("네이버 도서")
             .onAppear(perform: loadData)
@@ -32,7 +32,7 @@ struct MainListContentView: View {
     }
     
     func loadData() {
-        model.searchBook(model.kindOfBooks)
+        model.searchBook()
     }
     
     func asyncImage(_ url: URL?) -> some View {

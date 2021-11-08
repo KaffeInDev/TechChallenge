@@ -19,8 +19,9 @@
 		1D1DE7F5273955F700EDCD3F /* CoreModular in Frameworks */ = {isa = PBXBuildFile; productRef = 1D1DE7F4273955F700EDCD3F /* CoreModular */; };
 		1D1DE7F7273955F700EDCD3F /* CoreModular in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 1D1DE7F4273955F700EDCD3F /* CoreModular */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1D1DE7F92739567700EDCD3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7F82739567700EDCD3F /* Constants.swift */; };
-		1D1DE7FC27396D8E00EDCD3F /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7FB27396D8E00EDCD3F /* HTMLStringView.swift */; };
 		1D1DE7FE273986A600EDCD3F /* MainListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7FD273986A600EDCD3F /* MainListContentView.swift */; };
+		1D1DE80027399A3A00EDCD3F /* DetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE7FF27399A3A00EDCD3F /* DetailContentView.swift */; };
+		1D1DE8022739A70E00EDCD3F /* DetailContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE8012739A70E00EDCD3F /* DetailContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +70,9 @@
 		1D1DE7ED27394F8300EDCD3F /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		1D1DE7EF2739539200EDCD3F /* MainContetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContetViewModel.swift; sourceTree = "<group>"; };
 		1D1DE7F82739567700EDCD3F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1D1DE7FB27396D8E00EDCD3F /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
 		1D1DE7FD273986A600EDCD3F /* MainListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListContentView.swift; sourceTree = "<group>"; };
+		1D1DE7FF27399A3A00EDCD3F /* DetailContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentView.swift; sourceTree = "<group>"; };
+		1D1DE8012739A70E00EDCD3F /* DetailContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,11 +171,13 @@
 		1D1DE7EC27394F4E00EDCD3F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				1D1DE7F82739567700EDCD3F /* Constants.swift */,
+				1D1DE7DF27394C1900EDCD3F /* Model+Remote.swift */,
 				1D1DE7ED27394F8300EDCD3F /* MainContentView.swift */,
 				1D1DE7FD273986A600EDCD3F /* MainListContentView.swift */,
 				1D1DE7EF2739539200EDCD3F /* MainContetViewModel.swift */,
-				1D1DE7DF27394C1900EDCD3F /* Model+Remote.swift */,
-				1D1DE7F82739567700EDCD3F /* Constants.swift */,
+				1D1DE7FF27399A3A00EDCD3F /* DetailContentView.swift */,
+				1D1DE8012739A70E00EDCD3F /* DetailContentViewModel.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -188,7 +192,6 @@
 		1D1DE7FA27396D7B00EDCD3F /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
-				1D1DE7FB27396D8E00EDCD3F /* HTMLStringView.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -328,8 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1DE7F92739567700EDCD3F /* Constants.swift in Sources */,
+				1D1DE8022739A70E00EDCD3F /* DetailContentViewModel.swift in Sources */,
 				1D1DE7E027394C1900EDCD3F /* Model+Remote.swift in Sources */,
-				1D1DE7FC27396D8E00EDCD3F /* HTMLStringView.swift in Sources */,
+				1D1DE80027399A3A00EDCD3F /* DetailContentView.swift in Sources */,
 				1D1DE7B627393A1500EDCD3F /* VirnectTechChallengeApp.swift in Sources */,
 				1D1DE7F02739539200EDCD3F /* MainContetViewModel.swift in Sources */,
 				1D1DE7FE273986A600EDCD3F /* MainListContentView.swift in Sources */,

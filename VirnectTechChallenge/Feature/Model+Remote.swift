@@ -10,17 +10,17 @@ import CoreModular
 
 struct Model: Codable {}
 extension Model {
-    // MARK: - Book
+    // MARK: - Books
     struct Books: Codable {
         static let mock: Self = .init(total: .zero, start: .zero, display: .zero, items: [])
         
         let total: Int
         let start: Int
         let display: Int
-        let items: [Book]
+        let items: [Item]
         
         // MARK: - Item
-        struct Book: Codable {
+        struct Item: Codable {
             var title: String
             var link: String
             var image: String
@@ -32,7 +32,7 @@ extension Model {
                 case bookDescription = "description"
             }
             
-            func palinTitle() -> String {
+            func plainTitle() -> String {
                 title.replacingOccurrences(
                     of: "<[^>]+>",
                     with: "",
@@ -54,7 +54,17 @@ extension Remote where T == Model.Books {
         print(instance.urlComponents)
         return instance
     }
+    
+    static func search(isbn: String) -> Remote {
+        let instance = Remote(
+            "/v1/search/book_adv",
+            parameters: [URLQueryItem(name: "d_isbn", value: isbn)],
+            method: .get
+        )
+        return instance
+    }
 }
+
 
 
 
