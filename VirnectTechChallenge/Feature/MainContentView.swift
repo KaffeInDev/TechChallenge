@@ -13,36 +13,15 @@ struct MainContentView: View {
     var body: some View {
         
         TabView {
-            MainListContentView(.computer)
-            .tabItem {
-                Label(
-                    KindOfBooks.computer.rawValue,
-                    systemImage: "desktopcomputer"
-                )
+            ForEach(KindOfBooks.allCases) { item in
+                MainListContentView(item)
+                .tabItem {
+                    Label(
+                        item.rawValue,
+                        systemImage: item.imageName
+                    )
+                }
                 
-            }
-            MainListContentView(.society)
-            .tabItem {
-                Label(
-                    KindOfBooks.society.rawValue,
-                    systemImage: "person.3"
-                )
-                
-            }
-            MainListContentView(.music)
-            .tabItem {
-                Label(
-                    KindOfBooks.music.rawValue,
-                    systemImage: "music.note"
-                )
-                
-            }
-            MainListContentView(.travel)
-            .tabItem {
-                Label(
-                    KindOfBooks.travel.rawValue,
-                    systemImage: "airplane"
-                )
             }
         }
         .font(.headline)
