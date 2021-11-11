@@ -126,7 +126,6 @@
 		1D1DE7B427393A1500EDCD3F /* VirnectTechChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				1D1DE7FA27396D7B00EDCD3F /* CommonViews */,
 				1D1DE7EC27394F4E00EDCD3F /* Feature */,
 				1D1DE7B527393A1500EDCD3F /* VirnectTechChallengeApp.swift */,
 				1D1DE7B927393A1B00EDCD3F /* Assets.xcassets */,
@@ -187,13 +186,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1D1DE7FA27396D7B00EDCD3F /* CommonViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CommonViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
