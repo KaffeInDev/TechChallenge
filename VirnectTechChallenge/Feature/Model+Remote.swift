@@ -8,6 +8,7 @@
 import Foundation
 import CoreModular
 
+// MARK: - model
 struct Model: Codable {}
 extension Model {
     // MARK: - Books
@@ -31,7 +32,7 @@ extension Model {
                 case title, link, image, author, price, discount, publisher, pubdate, isbn
                 case bookDescription = "description"
             }
-            
+            // MARK: -  remove html tags
             func plainTitle() -> String {
                 title.replacingOccurrences(
                     of: "<[^>]+>",
@@ -43,7 +44,7 @@ extension Model {
         }
     }
 }
-
+// MARK: - api (static instance)
 extension Remote where T == Model.Books {
     static func search(_ keyword: String) -> Remote {
         let instance = Remote(

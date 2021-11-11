@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MainContentView: View {
-    
+    // MARK: - typealias
     typealias KindOfBooks = MainViewModel.KindOfBooks
+    // MARK: - Views
     var body: some View {
-        
         TabView {
             ForEach(KindOfBooks.allCases) { item in
                 MainListContentView(item)
@@ -27,7 +27,7 @@ struct MainContentView: View {
         .font(.headline)
     }
 }
-
+// MARK: - previews
 struct MainContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainContentView()

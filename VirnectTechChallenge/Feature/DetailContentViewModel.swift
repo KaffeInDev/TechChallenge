@@ -10,9 +10,11 @@ import Combine
 import CoreModular
 
 class DetailContentViewModel: ObservableObject {
+    // MARK: - dynamic observable wrapper
     @Published var books: [Model.Books.Item] = []
-    private var cancelables: Set<AnyCancellable> = Set()
     var isbn: String = .empty
+    private var cancelables: Set<AnyCancellable> = Set()
+    // MARK: - remote for search book(isbn) api
     func searchBook() {
         Remote<Model.Books>.search(isbn: isbn).asObservable()
             .replaceError(with: .mock)

@@ -11,16 +11,19 @@ import Combine
 import CoreModular
 
 class MainViewModel: ObservableObject {
+    // MARK: - enum, constants
     enum KindOfBooks: String, CaseIterable, Identifiable {
         case computer = "컴퓨터"
         case travel = "여행"
         case music = "음악"
         case society = "사회"
     }
+    // MARK: - dynamic observable wrapper
     @Published var books: [Model.Books.Item] = []
+    // MARK: - variable
     var kindOfBooks: KindOfBooks = .computer
     private var cancelables: Set<AnyCancellable> = Set()
-    
+    // MARK: - remote for search books api
     func searchBook() {
         Remote<Model.Books>.search(kindOfBooks.rawValue).asObservable()
             .replaceError(with: .mock)
@@ -30,9 +33,8 @@ class MainViewModel: ObservableObject {
             .store(in: &cancelables)
     }
 }
-
+// MARK: - extension for KindOfBooks enum
 extension MainViewModel.KindOfBooks {
-    
     var id: Self { self }
     var imageName: String {
         switch self {

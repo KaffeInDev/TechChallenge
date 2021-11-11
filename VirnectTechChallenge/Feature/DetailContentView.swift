@@ -10,7 +10,9 @@ import Combine
 import CoreModular
 
 struct DetailContentView: View {
+    // MARK: - viewModel
     @ObservedObject var model = DetailContentViewModel()
+    // MARK: - Views
     var body: some View {
         List(model.books, id: \.isbn) { item in
             asyncImage(URL(string: item.image))
@@ -32,15 +34,15 @@ struct DetailContentView: View {
                 .lineSpacing(15)
         }.onAppear(perform: loadData)
     }
-    
+    // MARK: - initializer
     init(_ isbn: String = .empty) {
         model.isbn = isbn
     }
-    
+    // MARK: - load data from remote
     func loadData() {
         model.searchBook()
     }
-    
+    // MARK: - load image from remote
     func asyncImage(_ url: URL?) -> some View {
         AsyncImage(url: url) { image in
             image.resizable()
@@ -53,7 +55,7 @@ struct DetailContentView: View {
         .lineSpacing(15)
     }
 }
-
+// MARK: - previews
 struct DetailContentView_Previews: PreviewProvider {
     static var previews: some View {
         DetailContentView()

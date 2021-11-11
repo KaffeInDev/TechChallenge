@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MainListContentView: View {
+    // MARK: - viewModel
     @ObservedObject var model = MainViewModel()
+    // MARK: - Views
     var body: some View {
         NavigationView {
             List(model.books, id: \.title) { item in
@@ -26,15 +28,15 @@ struct MainListContentView: View {
             .environment(\.defaultMinListRowHeight, 44)
         }
     }
-    
+    // MARK: - initializer
     init(_ tabKind: MainViewModel.KindOfBooks = .computer) {
         model.kindOfBooks = tabKind
     }
-    
+    // MARK: - load data from remote
     func loadData() {
         model.searchBook()
     }
-    
+    // MARK: - load image from remote
     func asyncImage(_ url: URL?) -> some View {
         AsyncImage(url: url) { image in
             image.resizable()
@@ -47,7 +49,7 @@ struct MainListContentView: View {
         .lineSpacing(10)
     }
 }
-
+// MARK: - previews
 struct MainListContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainListContentView()

@@ -16,7 +16,7 @@ struct VirnectTechChallengeApp: App {
             MainContentView()
         }
     }
-    
+    // MARK: - application initialize
     init() {
         RemoteDefault.policy =  RemotePolicy(host: Constants.host)
     }
